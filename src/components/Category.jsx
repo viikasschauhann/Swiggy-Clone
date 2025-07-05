@@ -37,7 +37,7 @@ export default function Category() {
                     <div className='cursor-pointer flex justify-center items-center w-[30px] h-[30px] bg-[#e2e2e7] rounded-full mx-2' onClick={nextSlide}><FaArrowRight /></div>
                 </div>
             </div>
-            <div className='flex border border-red-500 overflow-hidden'>
+            <div className='flex overflow-hidden'>
                 {
                     categories.map(
                         (cat, index) => {
