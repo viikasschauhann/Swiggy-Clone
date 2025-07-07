@@ -32,7 +32,7 @@ export default function TopRest() {
 
 
   return (
-    <div className='max-w-[1200px] mx-auto mb-[100px]'>
+    <div className='max-w-[1200px] mx-auto'>
 
       <div className=' my-5 flex items-center justify-between'>
         <div className='text-[25px] font-bold'>Top restaurant chains in Delhi</div>
@@ -50,6 +50,7 @@ export default function TopRest() {
           )
         }
       </div>
+      <hr className='my-4 border-[1px]'/>
     </div>
   )
 }

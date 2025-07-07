@@ -45,7 +45,8 @@ export default function Header() {
         <>
             <div className='black-overlay w-full h-full fixed duration-500' onClick={hideSideMenu} style={{
                 opacity: toggle ? 1 : 0,
-                visibility: toggle ? 'visible' : 'hidden'
+                visibility: toggle ? 'visible' : 'hidden',
+                zIndex: [9999999]
             }}>
                 <div onClick={(e) => {
                     e.stopPropagation();
@@ -58,7 +59,7 @@ export default function Header() {
 
             </div>
 
-            <header className='p-3 shadow-xl text-[#02060cb3]'>
+            <header className=' sticky top-0 p-3 shadow-xl text-[#02060cb3] bg-white z-[9999]'>
                 <div className='max-w-[1200px] mx-auto  flex items-center'>
                     <div className='w-[100px] '>
                         <img src="images/logo.png" className='w-full' alt="" />

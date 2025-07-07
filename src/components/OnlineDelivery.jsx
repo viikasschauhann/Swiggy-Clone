@@ -1,5 +1,5 @@
-import React from 'react'
-
+import React, { useEffect, useState } from 'react'
+import Card from './Card';
 export default function OnlineDelivery() {
 
     const [data, setData] = useState([]);
@@ -18,12 +18,28 @@ export default function OnlineDelivery() {
 
 
     return (
-        <div>
-            <div className='max-w-[1200px] mx-auto mb-[100px]'>
 
-                <div className=' my-5 flex items-center justify-between'>
-                    <div className='text-[25px] font-bold'>Top restaurant chains in Delhi</div>
+        <div className='max-w-[1200px] mx-auto'>
+
+            <div className=' my-5 flex items-center justify-between'>
+                <div className='text-[25px] font-bold'>Restaurants with online food delivery in Delhi</div>
+            </div>
+            <div>
+                <div className='max-w-[1200px] mx-auto flex my-4 gap-3 '>
+                    <div className='p-3 rounded-2xl shadow font-medium border'>Filter</div>
+                    <div className='p-3 rounded-2xl shadow font-medium border'>Sort By</div>
+                    <div className='p-3 rounded-2xl shadow font-medium border'>Fast Delivery</div>
+                    <div className='p-3 rounded-2xl shadow font-medium border'>New on Swiggy</div>
                 </div>
+            </div>
+            <div className='grid grid-cols-4 gap-3'>
+                {
+                    data.map(
+                        (d, i) => {
+                            return <Card {...d} />
+                        }
+                    )
+                }
             </div>
         </div>
     )
