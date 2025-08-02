@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import Card from './Card';
+import { BsFilter } from "react-icons/bs";
+import { IoIosArrowRoundDown } from "react-icons/io";
+
 export default function OnlineDelivery() {
 
     const [data, setData] = useState([]);
@@ -26,10 +29,13 @@ export default function OnlineDelivery() {
             </div>
             <div>
                 <div className='max-w-[1200px] mx-auto flex my-4 gap-3 '>
-                    <div className='p-3 rounded-2xl shadow font-medium border'>Filter</div>
-                    <div className='p-3 rounded-2xl shadow font-medium border'>Sort By</div>
-                    <div className='p-3 rounded-2xl shadow font-medium border'>Fast Delivery</div>
-                    <div className='p-3 rounded-2xl shadow font-medium border'>New on Swiggy</div>
+                    <div className='preferences'>Filter <BsFilter className='inline'/></div>
+                    <div className='preferences'>Sort By <IoIosArrowRoundDown className='inline'/></div>
+                    <div className='preferences'>Fast Delivery</div>
+                    <div className='preferences'>New on Swiggy</div>
+                    <div className='preferences'>Ratings 4.0+</div>
+                    <div className='preferences'>Pure Veg</div>
+                    <div className='preferences'>Offers</div>
                 </div>
             </div>
             <div className='grid grid-cols-4 gap-3'>

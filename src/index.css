@@ -10,3 +10,9 @@
 .image-overlay {
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, rgba(0,0,0, 1));
 }
+
+ .preferences {
+   @apply p-3 rounded-2xl shadow font-medium border cursor-pointer;
+
+  
+}

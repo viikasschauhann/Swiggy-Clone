@@ -21,13 +21,12 @@ export default function TopRest() {
 
   const prevSlide = () => {
     if (slide == 0) return false;
-    setSlide(slide - 2);
+    setSlide(slide - 3);
   }
 
   const nextSlide = () => {
-    console.log(data.length);
-    if(data.length - 4 == slide) return false;
-    setSlide(slide + 2);
+    if (data.length - 4 == slide) return false;
+    setSlide(slide + 3);
   }
 
 
@@ -41,16 +40,20 @@ export default function TopRest() {
           <div className='cursor-pointer flex justify-center items-center w-[30px] h-[30px] bg-[#e2e2e7] rounded-full mx-2' onClick={nextSlide}><FaArrowRight /></div>
         </div>
       </div>
-      <div className='flex gap-5 overflow-hidden'>
+      <div className='flex overflow-hidden'>
         {
-          data.map(
-            (d, i) => {
-              return <Card {...d} key={i} />
-            }
-          )
+          data.map((d, index) => {
+            return (
+              <div style={{
+                transform: `translateX(-${slide * 100}%)`
+              }} key={index} className='w-[273px] shrink-0 duration-500'>
+                <Card {...d} />
+              </div>
+            )
+          })
         }
       </div>
-      <hr className='my-4 border-[1px]'/>
+      <hr className='my-4 border-[1px]' />
     </div>
   )
 }
